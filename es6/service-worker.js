@@ -9,9 +9,9 @@ let CURRENT_CACHES = {
 self.addEventListener('install', event => {
     var urlsToPrefetch = [
         '/',
-        '/css/main.css',
-        '/main.js',
-        '/index.html'
+        'css/main.css',
+        'main.js',
+        'index.html'
     ];
 
     console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
