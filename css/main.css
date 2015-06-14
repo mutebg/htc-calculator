@@ -1,0 +1,185 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.screen {
+	background: #fff;
+	flex: auto;
+	text-align: right;
+	font-size: 20px;
+}
+
+.buttons-container {
+	display: flex;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	flex: auto;
+}
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	color: #6C6C6C;
+	border-top: 1px solid #BDBDBE;
+	border-left: 1px solid #BDBDBE;
+	border-right: 0;
+	border-bottom: 0;
+	background: #fff;
+	font-size: 18px;
+}
+
+.btn:active {
+	color: #65DD00;
+	background: #F2F2F2;
+}
+
+.btn--gray {
+	background: #E6E7E8;
+}
+
+.btn--gray:active {
+	background: #d0d0d0;
+}
+
+
+
+/* Portrait */
+@media only screen and ( orientation: portrait ) {
+	
+	.screen {
+		padding: 0 5vw;
+	}
+
+	.buttons--special {
+		display: none;
+	}
+
+	.btn {
+		width: 25vw;
+		height: 25vw;
+		line-height: 25vw;
+	}
+
+	.btn[data-name='clear'] {
+		width: 75vw;
+	}
+}
+
+/* Landscape */
+@media only screen and ( orientation: landscape ) {
+	
+	.screen {
+		padding: 0 2vw;
+	}
+
+	.buttons--special {
+		min-width: 37.5vw;
+		max-width: 37.5vw;
+		flex: auto;
+	}
+
+	.buttons--main {
+		min-width: 62.5vw;
+		max-width: 62.5vw;
+		flex: auto;
+	}
+
+	.btn {
+		width: 12.5vw;
+		height: 10vw;
+		line-height: 10vw;
+	}
+
+	.btn[data-name='7'] {
+		order: 1;
+	}
+
+	.btn[data-name='8'] {
+		order: 2;
+	}
+
+	.btn[data-name='9'] {
+		order: 3;
+	}
+
+	.btn[data-name='÷'] {
+		order: 4;
+	}
+
+	.btn[data-name='back'] {
+		order: 5;
+	}
+
+	.btn[data-name='4'] {
+		order: 6;
+	}
+
+	.btn[data-name='5'] {
+		order: 7;
+	}
+
+	.btn[data-name='6'] {
+		order: 8;
+	}
+
+	.btn[data-name='x'] {
+		order: 9;
+	}
+
+	.btn[data-name='clear'] {
+		order: 10;
+	}
+
+
+	.btn[data-name='1'] {
+		order: 11;
+	}
+
+	.btn[data-name='2'] {
+		order: 12;
+	}
+
+	.btn[data-name='3'] {
+		order: 13;
+	}
+
+	.btn[data-name='-'] {
+		order: 14;
+	}
+
+	.btn[data-name='+'] {
+		order: 15;
+	}
+
+
+	.btn[data-name='.'] {
+		order: 16;
+	}
+
+	.btn[data-name='0'] {
+		order: 17;
+		width: 25vw;
+	}
+
+	.btn[data-name='='] {
+		order: 18;
+		width: 25vw;
+	}
+}
